@@ -403,6 +403,51 @@ const dateConversion = (item) => {
     return item;
 }
 
-const receipts = receiptsArray.map(dateConversion);
 
-console.log(receipts);
+const receipts = receiptsArray.map(dateConversion)
+    .sort((item1, item2) => item1.date - item2.date);
+
+let prevDate = '';
+let newArr = [];
+
+for (const item of receipts) {
+    if (item.date !== prevDate) {
+        newArr.push({
+            date: [item],
+            dateValue: item.date
+        })
+    } else {
+        newArr[newArr.length - 1].date.push(item);
+
+    }
+
+    prevDate = item.date;
+}
+
+
+// console.log(newArr);
+
+let arr = [];
+let prevId = '';
+
+for (let i = 0; i < newArr.length; i++) {
+    for (const iterator of newArr[i].date) {
+        if (iterator.id !== prevId) {
+            // console.log(newArr[i]);
+            arr.push({
+                date: [{
+                    idValue: iterator.id,
+                    id: [iterator]
+                }],
+                dateValue: iterator.date
+            });
+        } else {
+            arr[arr.length - 1].date[0].id.push(iterator);
+        }
+
+        prevId = iterator.id;
+
+
+    }
+}
+console.log(arr);
