@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 
 
 const receiptsArray = [{
@@ -408,46 +408,40 @@ const receipts = receiptsArray.map(dateConversion)
     .sort((item1, item2) => item1.date - item2.date);
 
 let prevDate = '';
+let prId = '';
 let newArr = [];
+let datekey = 0;
+
+// console.log(receipts);
 
 for (const item of receipts) {
     if (item.date !== prevDate) {
         newArr.push({
-            date: [item],
+            date: [{
+                id: [item],
+                idValue: item.id,
+            }],
             dateValue: item.date
         })
+        datekey = 0;
     } else {
-        newArr[newArr.length - 1].date.push(item);
+        if (prId !== item.id) {
+            newArr[newArr.length - 1].date.push({
 
+                id: [item],
+                idValue: item.id,
+
+            });
+            datekey++;
+        } else {
+
+            newArr[newArr.length - 1].date[datekey].id.push(item);
+        }
     }
+
 
     prevDate = item.date;
+    prId = item.id;
 }
 
-
-// console.log(newArr);
-
-let arr = [];
-let prevId = '';
-
-for (let i = 0; i < newArr.length; i++) {
-    for (const iterator of newArr[i].date) {
-        if (iterator.id !== prevId) {
-            // console.log(newArr[i]);
-            arr.push({
-                date: [{
-                    idValue: iterator.id,
-                    id: [iterator]
-                }],
-                dateValue: iterator.date
-            });
-        } else {
-            arr[arr.length - 1].date[0].id.push(iterator);
-        }
-
-        prevId = iterator.id;
-
-
-    }
-}
-console.log(arr);
+console.log(newArr);
