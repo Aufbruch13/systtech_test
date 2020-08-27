@@ -389,11 +389,10 @@ const receiptsArray = [{
 
 
 
-const dateConversion = (item) => {
+const dateConversion = (item) => { // конвертация даты в формат 'число месяц' (кириллица)
     const date = item.date.split(' ')[0];
 
     const options = {
-        // year: 'numeric',
         month: 'long',
         day: 'numeric',
         timezone: 'UTC'
@@ -404,44 +403,51 @@ const dateConversion = (item) => {
 }
 
 
-const receipts = receiptsArray.map(dateConversion)
+const sortArr = receiptsArray.map(dateConversion) //сортировка 
     .sort((item1, item2) => item1.date - item2.date);
 
-let prevDate = '';
-let prId = '';
-let newArr = [];
-let datekey = 0;
 
-// console.log(receipts);
 
-for (const item of receipts) {
-    if (item.date !== prevDate) {
-        newArr.push({
+const result = [];
+let prevDate = ''; //предыдущая дата
+let prevId = ''; //предыдущый id (ghb[jl])
+let dateKey = 0; // ключ массива свойства date. При каждом новом id (приходе) создается объект вида 
+//{ id: [], idValue: id(приход)}, где date - это ключ массива в свойстве id.
+
+
+for (const item of sortArr) { //создание многомерного массива
+    if (item.date !== prevDate) { // добавления в массив структуры с новой датой
+        result.push({
             date: [{
                 id: [item],
                 idValue: item.id,
             }],
             dateValue: item.date
         })
-        datekey = 0;
+        dateKey = 0;
     } else {
-        if (prId !== item.id) {
-            newArr[newArr.length - 1].date.push({
+        if (prevId !== item.id) { //добавление в массив структуры с новым id
+            result[result.length - 1].date.push({
 
                 id: [item],
                 idValue: item.id,
 
             });
-            datekey++;
+            dateKey++;
         } else {
 
-            newArr[newArr.length - 1].date[datekey].id.push(item);
+            result[result.length - 1].date[dateKey].id.push(item); //добавление данных в уже созданную структуру 
         }
     }
 
-
     prevDate = item.date;
-    prId = item.id;
+    prevId = item.id;
 }
 
-console.log(newArr);
+for (const iterator of object) {
+
+
+
+
+
+}
