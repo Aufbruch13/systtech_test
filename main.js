@@ -5,7 +5,7 @@ const receiptsArray = [{
     "date": "2017-10-16 12:07:07",
     "name": "Творог 9% с курагой",
     "id": 564564867361367,
-    "image": "http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg",
+    "image": "https://i.otzovik.com/objects/b/720000/719926.png",
     "price": 121,
     "quantity": 45,
     "removed": 0
@@ -29,7 +29,7 @@ const receiptsArray = [{
     "date": "2017-10-16 12:07:07",
     "name": "Виноград 0,3л",
     "id": 564564867361367,
-    "image": null,
+    "image": "http://карапузик.com.images.1c-bitrix-cdn.ru/upload/iblock/b28/b28f089d41db757b74cfebfe21609228.jpg",
     "price": 65,
     "quantity": 87,
     "removed": 0
@@ -37,7 +37,7 @@ const receiptsArray = [{
     "date": "2017-10-16 12:07:07",
     "name": "Русская картошка чедар 50",
     "id": 564564867361367,
-    "image": "https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg",
+    "image": "https://vksv.ru/wp-content/uploads/2018/02/CHipsy-Russkaya-kartoshka-Syr-150g.jpeg",
     "price": 46.3,
     "quantity": 86,
     "removed": 0
@@ -85,7 +85,7 @@ const receiptsArray = [{
     "date": "2017-10-16 15:09:08",
     "name": "Творог 9% с курагой",
     "id": 564564867361368,
-    "image": "http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg",
+    "image": "https://i.otzovik.com/objects/b/720000/719926.png",
     "price": 121,
     "quantity": 41,
     "removed": 0
@@ -101,7 +101,7 @@ const receiptsArray = [{
     "date": "2017-10-16 15:09:08",
     "name": "Виноград 0,3л",
     "id": 564564867361368,
-    "image": null,
+    "image": "http://карапузик.com.images.1c-bitrix-cdn.ru/upload/iblock/b28/b28f089d41db757b74cfebfe21609228.jpg",
     "price": 65,
     "quantity": 39,
     "removed": 0
@@ -125,7 +125,7 @@ const receiptsArray = [{
     "date": "2017-10-16 18:11:09",
     "name": "Русская картошка чедар 50",
     "id": 564564867361369,
-    "image": "https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg",
+    "image": "https://vksv.ru/wp-content/uploads/2018/02/CHipsy-Russkaya-kartoshka-Syr-150g.jpeg",
     "price": 46.3,
     "quantity": 51,
     "removed": 0
@@ -157,7 +157,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Русская картошка чедар 50",
     "id": 564564867361361,
-    "image": "https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg",
+    "image": "https://vksv.ru/wp-content/uploads/2018/02/CHipsy-Russkaya-kartoshka-Syr-150g.jpeg",
     "price": 46.3,
     "quantity": 62,
     "removed": 0
@@ -165,7 +165,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Молочный Сказка 100",
     "id": 564564867361361,
-    "image": "http://produkty-online.ru/wa-data/public/shop/products/31/83/18331/images/1359/1359.970.jpg",
+    "image": "https://selcdn.fedsp.com/kaph/15/1089/500x500.1165a5ca267833cd.jpg",
     "price": 39,
     "quantity": 67,
     "removed": 0
@@ -173,7 +173,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Тоник 0,5л",
     "id": 564564867361361,
-    "image": "https://www.utkonos.ru/images/photo/3139/3139296H.jpg",
+    "image": "http://makro-market.ru/wa-data/public/shop/products/91/22/12291/images/13661/13661.345x0.jpg",
     "price": 63,
     "quantity": 51,
     "removed": 0
@@ -189,7 +189,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Творог 9% с курагой",
     "id": 564564867361361,
-    "image": "http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg",
+    "image": "https://i.otzovik.com/objects/b/720000/719926.png",
     "price": 121,
     "quantity": 60,
     "removed": 0
@@ -197,7 +197,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Виноград 0,3л",
     "id": 564564867361361,
-    "image": null,
+    "image": "http://карапузик.com.images.1c-bitrix-cdn.ru/upload/iblock/b28/b28f089d41db757b74cfebfe21609228.jpg",
     "price": 65,
     "quantity": 61,
     "removed": 0
@@ -205,7 +205,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Беседа. 50гр",
     "id": 564564867361361,
-    "image": "http://xn--4-8sbu.xn--p1ai/thumb/4KQdJOhw0Uu5AnP0PPIrMQ/200r200/761268/3152.png",
+    "image": "https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/2636/cache_500_56771.jpg",
     "price": 36.5,
     "quantity": 41,
     "removed": 0
@@ -229,7 +229,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Тоник 0,5л",
     "id": 564564867361362,
-    "image": "https://www.utkonos.ru/images/photo/3139/3139296H.jpg",
+    "image": "http://makro-market.ru/wa-data/public/shop/products/91/22/12291/images/13661/13661.345x0.jpg",
     "price": 63,
     "quantity": 31,
     "removed": 0
@@ -253,7 +253,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Творог 9% с курагой",
     "id": 564564867361362,
-    "image": "http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg",
+    "image": "https://i.otzovik.com/objects/b/720000/719926.png",
     "price": 121,
     "quantity": 23,
     "removed": 0
@@ -277,7 +277,7 @@ const receiptsArray = [{
     "date": "2017-11-29 17:26:57",
     "name": "Русская картошка чедар 50",
     "id": 564564867361365,
-    "image": "https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg",
+    "image": "https://vksv.ru/wp-content/uploads/2018/02/CHipsy-Russkaya-kartoshka-Syr-150g.jpeg",
     "price": 46.3,
     "quantity": 3,
     "removed": 0
@@ -285,7 +285,7 @@ const receiptsArray = [{
     "date": "2017-11-29 17:26:57",
     "name": "Виноград 0,3л",
     "id": 564564867361365,
-    "image": null,
+    "image": "http://карапузик.com.images.1c-bitrix-cdn.ru/upload/iblock/b28/b28f089d41db757b74cfebfe21609228.jpg",
     "price": 65,
     "quantity": 88,
     "removed": 0
@@ -301,7 +301,7 @@ const receiptsArray = [{
     "date": "2017-11-29 17:26:57",
     "name": "Тоник 0,5л",
     "id": 564564867361365,
-    "image": "https://www.utkonos.ru/images/photo/3139/3139296H.jpg",
+    "image": "http://makro-market.ru/wa-data/public/shop/products/91/22/12291/images/13661/13661.345x0.jpg",
     "price": 63,
     "quantity": 64,
     "removed": 0
@@ -309,7 +309,7 @@ const receiptsArray = [{
     "date": "2017-11-29 17:26:57",
     "name": "Молочный Сказка 100",
     "id": 564564867361365,
-    "image": "http://produkty-online.ru/wa-data/public/shop/products/31/83/18331/images/1359/1359.970.jpg",
+    "image": "https://selcdn.fedsp.com/kaph/15/1089/500x500.1165a5ca267833cd.jpg",
     "price": 39,
     "quantity": 54,
     "removed": 0
@@ -317,7 +317,7 @@ const receiptsArray = [{
     "date": "2017-11-29 17:26:57",
     "name": "Сметана и лук 25г",
     "id": 564564867361365,
-    "image": "https://teremok.sm.ua/wa-data/public/shop/products/82/25/82582/images/35179/35179.750@2x.jpg",
+    "image": "https://melnitsa.tm/photos_catalog/009910.jpg",
     "price": 30,
     "quantity": 33,
     "removed": 0
@@ -325,7 +325,7 @@ const receiptsArray = [{
     "date": "2017-11-29 17:26:57",
     "name": "Беседа. 50гр",
     "id": 564564867361365,
-    "image": "http://xn--4-8sbu.xn--p1ai/thumb/4KQdJOhw0Uu5AnP0PPIrMQ/200r200/761268/3152.png",
+    "image": "https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/2636/cache_500_56771.jpg",
     "price": 36.5,
     "quantity": 6,
     "removed": 0
@@ -341,7 +341,7 @@ const receiptsArray = [{
     "date": "2017-11-29 19:31:03",
     "name": "Русская картошка чедар 50",
     "id": 564564867361363,
-    "image": "https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg",
+    "image": "https://vksv.ru/wp-content/uploads/2018/02/CHipsy-Russkaya-kartoshka-Syr-150g.jpeg",
     "price": 46.3,
     "quantity": 6,
     "removed": 0
@@ -349,7 +349,7 @@ const receiptsArray = [{
     "date": "2017-11-29 19:31:03",
     "name": "Сметана и лук 25г",
     "id": 564564867361363,
-    "image": "https://teremok.sm.ua/wa-data/public/shop/products/82/25/82582/images/35179/35179.750@2x.jpg",
+    "image": "https://melnitsa.tm/photos_catalog/009910.jpg",
     "price": 30,
     "quantity": 18,
     "removed": 0
@@ -357,7 +357,7 @@ const receiptsArray = [{
     "date": "2017-11-29 19:31:03",
     "name": "Беседа. 50гр",
     "id": 564564867361363,
-    "image": "http://xn--4-8sbu.xn--p1ai/thumb/4KQdJOhw0Uu5AnP0PPIrMQ/200r200/761268/3152.png",
+    "image": "https://cdn-irec.r-99.com/sites/default/files/imagecache/300o/product-images/2636/cache_500_56771.jpg",
     "price": 36.5,
     "quantity": 99,
     "removed": 0
@@ -411,32 +411,43 @@ const sortArr = receiptsArray.map(dateConversion) //сортировка
 const result = [];
 let prevDate = ''; //предыдущая дата
 let prevId = ''; //предыдущый id (ghb[jl])
+let sum = 0; //сумма за день
 let dateKey = 0; // ключ массива свойства date. При каждом новом id (приходе) создается объект вида 
 //{ id: [], idValue: id(приход)}, где date - это ключ массива в свойстве id.
+
 
 
 for (const item of sortArr) { //создание многомерного массива
     if (item.date !== prevDate) { // добавления в массив структуры с новой датой
         result.push({
-            date: [{
-                id: [item],
+            dateArr: [{
+                idArr: [item],
                 idValue: item.id,
             }],
-            dateValue: item.date
-        })
-        dateKey = 0;
-    } else {
-        if (prevId !== item.id) { //добавление в массив структуры с новым id
-            result[result.length - 1].date.push({
+            dateValue: item.date,
+            sum: Math.ceil(item.price * item.quantity),
 
-                id: [item],
+        })
+
+        sum = 0;
+        dateKey = 0;
+
+    } else {
+        sum = result[result.length - 1].sum + Math.ceil(item.price * item.quantity);
+
+        result[result.length - 1].sum = sum;
+
+        if (prevId !== item.id) { //добавление в массив структуры с новым id
+            result[result.length - 1].dateArr.push({
+
+                idArr: [item],
                 idValue: item.id,
 
             });
             dateKey++;
         } else {
 
-            result[result.length - 1].date[dateKey].id.push(item); //добавление данных в уже созданную структуру 
+            result[result.length - 1].dateArr[dateKey].idArr.push(item); //добавление данных в уже созданную структуру 
         }
     }
 
@@ -444,10 +455,82 @@ for (const item of sortArr) { //создание многомерного мас
     prevId = item.id;
 }
 
-for (const iterator of object) {
+let html = '';
 
+for (let item of result) {
+    html += `  
+  <section class="receipt">
+    <div class="container">
+      <div class="receipt-wrapper">
+        <div class="receipt-headers">
+          <h3>${item.dateValue}</h3>
+          <h3> Документов: ${item.dateArr.length} (${item.sum} р)</h3>
+        </div>
+        
 
+          ${item.dateArr.sort((a, b) => a.idValue - b.idValue).map(
+          (dateItem) => `
+          <div class="receipt-item"> 
+            <div class="receipt-item__header">
+            <p>Приход №${dateItem.idValue}</p>
+            <p>
+              ${
+                dateItem.idArr.reduce(
+                  (a, b) => Math.ceil(a + Number(b.price * b.quantity)), 0
+                )
+              }р
+              </p>
+            </div>
+            
+            <div class="receipt-item__prods">
+              <a><span>Товаров: ${dateItem.idArr.length}</span></a>
+              <div class="receipt-item__prods_card" hidden>
+              ${dateItem.idArr.map(
+                (idItem) => `
+                <div class="receipt-item__prods_wrapper">
+                  <div class="item-wrapper">
+                    <div class="img-wrapper">
+                      <img src="${idItem.image}" alt="">
+                    </div>
 
+                    <div class="info-wrapper">
+                      <p>${idItem.name}</p>
+                      <p><span>${idItem.quantity} штук х ${Math.ceil(idItem.price)} р</span></p>
+                    </div>
+                  </div>
 
+                  <div class="full-price-wrapper">
+                    <p><span>${Math.ceil(idItem.price * idItem.quantity)}р</span></p>
+                  </div>
+                </div>
+
+              `
+              ).join('')}
+            </div>
+          </div>
+        </div>
+            `
+        ).join('')}  
+      
+          
+        
+      </div>
+    </div>
+  </section>`
+}
+
+const main = document.querySelector('main');
+main.innerHTML = html; //добавление верстки в элемент
+
+const callback = (e) => {
+  if (!e.target.closest('a')) {
+    return;
+  }
+
+  let hideBlock = e.target.parentElement.nextElementSibling;
+
+  hideBlock.hidden = !hideBlock.hidden;
 
 }
+
+main.addEventListener('click', callback);
