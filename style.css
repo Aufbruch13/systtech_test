@@ -1,13 +1,14 @@
 body {
     min-width: 320px;
     letter-spacing: -0.01em;
-    color: #808080;
+    color: #979797fd;
     background-color: #f1f1f1;
     position: relative;
+    font-weight: 500;
 }
 
-.receipt {
-    margin-top: 60px;
+main {
+    margin: 60px auto;
 }
 
 .receipt-wrapper {
@@ -17,21 +18,26 @@ body {
 
 .receipt-headers {
     padding: 20px 40px 0;
-    font-weight: 500;
     display: flex;
     justify-content: space-between;
 }
 
 .receipt-item {
     padding: 20px 40px;
+    border-bottom: 1px solid lightgrey;
 }
 
 .receipt-item__header {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 60px;
     display: flex;
     justify-content: space-between;
 }
+
+
+/* .receipt-item__prods {
+    border-bottom: 1px solid lightgrey;
+} */
 
 .receipt-item__prods a {
     text-decoration: none;
@@ -45,6 +51,7 @@ body {
     text-decoration: none;
     color: #808080;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .receipt-item__prods a span::after {
@@ -78,13 +85,15 @@ body {
 }
 
 .receipt-item__prods span {
-    font-size: 20px;
+    font-size: 22px;
     color: #000;
-    font-weight: 500;
 }
 
 .receipt-item__prods .img-wrapper {
     margin-left: 30px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
 }
 
 .receipt-item__prods .info-wrapper {
@@ -98,6 +107,6 @@ body {
 }
 
 .receipt-item__prods img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
 }
