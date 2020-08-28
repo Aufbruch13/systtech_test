@@ -53,7 +53,7 @@ const receiptsArray = [{
     "date": "2017-10-16 12:07:07",
     "name": "Аленка карамель 100г Акционный товар Большая скидка",
     "id": 564564867361367,
-    "image": "https://www.utkonos.ru/images/photo/3054/3054289H.jpg",
+    "image": "https://www.uniconf.ru/upload/resize_cache/iblock/f6f/340_380_1/f6fb8672cef72d1473fbf600105a4d2b.jpg",
     "price": 73.9,
     "quantity": 94,
     "removed": 0
@@ -117,7 +117,7 @@ const receiptsArray = [{
     "date": "2017-10-16 18:11:09",
     "name": "Аленка карамель 100г Акционный товар Большая скидка",
     "id": 564564867361369,
-    "image": "https://www.utkonos.ru/images/photo/3054/3054289H.jpg",
+    "image": "https://www.uniconf.ru/upload/resize_cache/iblock/f6f/340_380_1/f6fb8672cef72d1473fbf600105a4d2b.jpg",
     "price": 73.9,
     "quantity": 99,
     "removed": 0
@@ -269,7 +269,7 @@ const receiptsArray = [{
     "date": "2017-11-03 13:11:06",
     "name": "Аленка карамель 100г Акционный товар Большая скидка",
     "id": 564564867361362,
-    "image": "https://www.utkonos.ru/images/photo/3054/3054289H.jpg",
+    "image": "https://www.uniconf.ru/upload/resize_cache/iblock/f6f/340_380_1/f6fb8672cef72d1473fbf600105a4d2b.jpg",
     "price": 73.9,
     "quantity": 12,
     "removed": 0
