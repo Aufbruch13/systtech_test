@@ -409,7 +409,7 @@ const sortArr = receiptsArray.map(dateConversion) //сортировка
 
 const result = [];
 let prevDate = ''; //предыдущая дата
-let prevId = ''; //предыдущый id (ghb[jl])
+let prevId = ''; //предыдущый id (приход)
 let sum = 0; //сумма за день
 let dateKey = 0; // ключ массива свойства date. При каждом новом id (приходе) создается объект вида 
 //{ id: [], idValue: id(приход)}, где date - это ключ массива в свойстве id.
