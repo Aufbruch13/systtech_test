@@ -266,6 +266,7 @@ main {
     }
     .receipt-item__prods a span::after {
         left: 3px;
+        top: 7px;
     }
     .receipt-item__prods a span {
         font-size: 13px;
