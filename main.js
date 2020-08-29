@@ -460,60 +460,59 @@ let html = '';
 for (let item of result) {
     html += `  
   <section class="receipt">
-    <div class="container">
+    <div class="receipt-container">
+      <div class="receipt-headers">  
+        <div class="icon-arrow"></div>
+        <h3>${item.dateValue}</h3>
+        <h3> Документов: ${item.dateArr.length} (${item.sum} р)</h3>
+      </div>
+      
       <div class="receipt-wrapper">
-        <div class="receipt-headers">
-          <h3>${item.dateValue}</h3>
-          <h3> Документов: ${item.dateArr.length} (${item.sum} р)</h3>
-        </div>
-        
-
-          ${item.dateArr.sort((a, b) => a.idValue - b.idValue).map(
-          (dateItem) => `
-          <div class="receipt-item"> 
-            <div class="receipt-item__header">
-            <p>Приход №${dateItem.idValue}</p>
-            <p>
-              ${
-                dateItem.idArr.reduce(
-                  (a, b) => Math.ceil(a + Number(b.price * b.quantity)), 0
-                )
-              }р
-              </p>
-            </div>
-            
-            <div class="receipt-item__prods">
-              <a><span>Товаров: ${dateItem.idArr.length}</span></a>
-              <div class="receipt-item__prods_card" hidden>
-              ${dateItem.idArr.map(
-                (idItem) => `
-                <div class="receipt-item__prods_wrapper">
-                  <div class="item-wrapper">
-                    <div class="img-wrapper">
-                      <img src="${idItem.image}" alt="">
-                    </div>
-
-                    <div class="info-wrapper">
-                      <p>${idItem.name}</p>
-                      <p><span>${idItem.quantity} штук х ${Math.ceil(idItem.price)} р</span></p>
-                    </div>
-                  </div>
-
-                  <div class="full-price-wrapper">
-                    <p><span>${Math.ceil(idItem.price * idItem.quantity)}р</span></p>
-                  </div>
+        ${item.dateArr.sort((a, b) => a.idValue - b.idValue).map(
+        (dateItem) => `
+        <div class="receipt-item"> 
+          <div class="receipt-item__header">
+          <p>Приход №${dateItem.idValue}</p>
+          <p>
+            ${
+              dateItem.idArr.reduce(
+                (a, b) => Math.ceil(a + Number(b.price * b.quantity)), 0
+              )
+            }р
+            </p>
+          </div>
+          
+          <div class="receipt-item__prods">
+            <a><span>Товаров: ${dateItem.idArr.length}</span></a>
+            <div class="receipt-item__prods_card" hidden>
+            ${dateItem.idArr.map(
+              (idItem) => `
+              
+              <div class="item-wrapper">
+                <div class="img-wrapper">
+                  <img src="${idItem.image}" alt="">
                 </div>
 
-              `
-              ).join('')}
-            </div>
+                <div class="info-wrapper">
+                  <p>${idItem.name}</p>
+                  
+                  <div class="price-wrapper">
+                    <p><span>${idItem.quantity} штук х ${Math.ceil(idItem.price)} р</span></p>
+                    <p><span>${Math.ceil(idItem.price * idItem.quantity)}р</span></p>
+                  </div>
+
+                </div>
+              </div>
+
+          
+            `
+            ).join('')}
           </div>
         </div>
-            `
-        ).join('')}  
+      </div>
+          `
+      ).join('')}  
       
-          
-        
       </div>
     </div>
   </section>`
@@ -522,15 +521,30 @@ for (let item of result) {
 const main = document.querySelector('main');
 main.innerHTML = html; //добавление верстки в элемент
 
-const callback = (e) => {
-  if (!e.target.closest('a')) {
+const toHideProducts = (e) => {
+  if (!e.target.closest('.receipt-item__prods a')) {
     return;
   }
 
   let hideBlock = e.target.parentElement.nextElementSibling;
 
   hideBlock.hidden = !hideBlock.hidden;
-
 }
 
-main.addEventListener('click', callback);
+main.addEventListener('click', toHideProducts);
+
+
+const toHideReceipts = (e) => {
+  if (!e.target.closest('.receipt-headers')
+    || e.target.tagName === 'DIV') {
+    return;
+  }
+
+  const parentBlock = e.target.parentElement;
+  const hideBlock = parentBlock.nextElementSibling;
+
+  hideBlock.hidden = !hideBlock.hidden;
+  parentBlock.firstElementChild.classList.toggle("close");
+}
+
+main.addEventListener('click', toHideReceipts);
