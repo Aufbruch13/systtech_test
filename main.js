@@ -407,7 +407,6 @@ const sortArr = receiptsArray.map(dateConversion) //сортировка
     .sort((item1, item2) => item1.date - item2.date);
 
 
-
 const result = [];
 let prevDate = ''; //предыдущая дата
 let prevId = ''; //предыдущый id (ghb[jl])
@@ -457,6 +456,16 @@ for (const item of sortArr) { //создание многомерного мас
 
 let html = '';
 
+const toCutStr = (str, symb) => { // обрезание строки
+    if (document.documentElement.clientWidth < 769 &&
+        str.length > symb) {
+
+        return str.slice(0, symb) + '...';
+    }
+
+    return str;
+}
+
 for (let item of result) {
     html += `  
   <section class="receipt">
@@ -494,7 +503,7 @@ for (let item of result) {
                 </div>
 
                 <div class="info-wrapper">
-                  <p>${idItem.name}</p>
+                  <p>${toCutStr(idItem.name, 32)}</p>
                   
                   <div class="price-wrapper">
                     <p><span>${idItem.quantity} штук х ${Math.ceil(idItem.price)} р</span></p>
@@ -526,7 +535,7 @@ const toHideProducts = (e) => {
     return;
   }
 
-  let hideBlock = e.target.parentElement.nextElementSibling;
+  const hideBlock = e.target.parentElement.nextElementSibling;
 
   hideBlock.hidden = !hideBlock.hidden;
 }
@@ -536,7 +545,7 @@ main.addEventListener('click', toHideProducts);
 
 const toHideReceipts = (e) => {
   if (!e.target.closest('.receipt-headers')
-    || e.target.tagName === 'DIV') {
+    || e.target.className === 'receipt-headers') {
     return;
   }
 
