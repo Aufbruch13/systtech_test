@@ -456,12 +456,18 @@ for (const item of sortArr) { //создание многомерного мас
 
 let html = '';
 
-const toCutStr = (str, symb) => { // обрезание строки
-    if (document.documentElement.clientWidth < 769 &&
-        str.length > symb) {
+const toCutStr = (str) => { // обрезание строки
+    if (document.documentElement.clientWidth < 440 &&
+        str.length > 28) {
 
-        return str.slice(0, symb) + '...';
+        return str.slice(0, 28) + '...';
     }
+    if (document.documentElement.clientWidth < 769 &&
+        str.length > 32) {
+
+        return str.slice(0, 32) + '...';
+    }
+
 
     return str;
 }
@@ -503,7 +509,7 @@ for (let item of result) {
                 </div>
 
                 <div class="info-wrapper">
-                  <p>${toCutStr(idItem.name, 32)}</p>
+                  <p>${toCutStr(idItem.name)}</p>
                   
                   <div class="price-wrapper">
                     <p><span>${idItem.quantity} штук х ${Math.ceil(idItem.price)} р</span></p>
