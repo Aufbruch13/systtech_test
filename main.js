@@ -424,7 +424,7 @@ for (const item of sortArr) { //создание многомерного мас
                 idValue: item.id,
             }],
             dateValue: item.date,
-            sum: Math.ceil(item.price * item.quantity),
+            sum: item.price * item.quantity,
 
         })
 
@@ -432,7 +432,7 @@ for (const item of sortArr) { //создание многомерного мас
         dateKey = 0;
 
     } else {
-        sum = result[result.length - 1].sum + Math.ceil(item.price * item.quantity);
+        sum = result[result.length - 1].sum + item.price * item.quantity;
 
         result[result.length - 1].sum = sum;
 
@@ -456,18 +456,18 @@ for (const item of sortArr) { //создание многомерного мас
 
 let html = '';
 
+
 const toCutStr = (str) => { // обрезание строки
-    if (document.documentElement.clientWidth < 440 &&
+    if (document.documentElement.clientWidth < 372 &&
         str.length > 28) {
 
-        return str.slice(0, 28) + '...';
+        return str.slice(0, 25) + '...';
     }
     if (document.documentElement.clientWidth < 769 &&
         str.length > 32) {
 
-        return str.slice(0, 32) + '...';
+        return str.slice(0, 35) + '...';
     }
-
 
     return str;
 }
@@ -479,7 +479,8 @@ for (let item of result) {
       <div class="receipt-headers">  
         <div class="icon-arrow"></div>
         <h3>${item.dateValue}</h3>
-        <h3> Документов: ${item.dateArr.length} (${item.sum} р)</h3>
+        <h3> Документов: ${item.dateArr.length} (${(item.sum).
+          toLocaleString('ru-RU', { minimumFractionDigits: 2})} р)</h3>
       </div>
       
       <div class="receipt-wrapper">
@@ -491,8 +492,8 @@ for (let item of result) {
           <p>
             ${
               dateItem.idArr.reduce(
-                (a, b) => Math.ceil(a + Number(b.price * b.quantity)), 0
-              )
+                (a, b) => a + Number(b.price * b.quantity), 0
+              ).toLocaleString('ru-RU', { minimumFractionDigits: 2})
             }р
             </p>
           </div>
@@ -546,12 +547,12 @@ const toHideProducts = (e) => {
   hideBlock.hidden = !hideBlock.hidden;
 }
 
-main.addEventListener('click', toHideProducts);
+main.addEventListener('click', toHideProducts); ////скрыетие/открытия блока со списком товаров 
 
 
 const toHideReceipts = (e) => {
-  if (!e.target.closest('.receipt-headers')
-    || e.target.className === 'receipt-headers') {
+  if (!e.target.closest('.receipt-headers') ||
+    e.target.className === 'receipt-headers') {
     return;
   }
 
@@ -562,4 +563,4 @@ const toHideReceipts = (e) => {
   parentBlock.firstElementChild.classList.toggle("close");
 }
 
-main.addEventListener('click', toHideReceipts);
+main.addEventListener('click', toHideReceipts); //скрыетие/открытия блока со списками товаров за день
