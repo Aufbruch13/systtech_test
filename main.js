@@ -388,7 +388,6 @@ const receiptsArray = [{
 }];
 
 
-
 const dateConversion = (item) => { // конвертация даты в формат 'число месяц' (кириллица)
     const date = item.date.split(' ')[0];
 
@@ -410,10 +409,8 @@ const sortArr = receiptsArray.map(dateConversion) //сортировка
 const result = [];
 let prevDate = ''; //предыдущая дата
 let prevId = ''; //предыдущый id (приход)
-let sum = 0; //сумма за день
 let dateKey = 0; // ключ массива свойства date. При каждом новом id (приходе) создается объект вида 
 //{ id: [], idValue: id(приход)}, где date - это ключ массива в свойстве id.
-
 
 
 for (const item of sortArr) { //создание многомерного массива
@@ -428,13 +425,10 @@ for (const item of sortArr) { //создание многомерного мас
 
         })
 
-        sum = 0;
         dateKey = 0;
 
     } else {
-        sum = result[result.length - 1].sum + item.price * item.quantity;
-
-        result[result.length - 1].sum = sum;
+        result[result.length - 1].sum += item.price * item.quantity;
 
         if (prevId !== item.id) { //добавление в массив структуры с новым id
             result[result.length - 1].dateArr.push({
