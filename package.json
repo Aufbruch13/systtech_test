@@ -18,5 +18,8 @@
     "homepage": "https://github.com/Aufbruch13/test-ST#readme",
     "dependencies": {
         "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "pug": "^3.0.0"
     }
 }

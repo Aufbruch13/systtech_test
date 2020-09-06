@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    style
+      include style.css
+
+  title Test-ST
+
+  include include.pug 
+
+  body
+    main
+      each date in arr_result
+        section.receipt
+          div.receipt-container
+            div.receipt-headers
+              div.icon-arrow
+              h3= date.dateValue
+              h3 Документов: #{date.dateArr.length + " (" + (toFormatPrice(date.sum))} р)
+
+            div.receipt-wrapper
+              each id in date.dateArr.sort(function(a, b) {return a.idValue - b.idValue})
+                div.receipt-item
+                  div.receipt-item__header
+                    p Приход №#{id.idValue} 
+                    p #{toFormatPrice(id.idArr.reduce(function(a, b) { return a + Number(b.price * b.quantity)}, 0))} р
+                  
+                  div.receipt-item__prods
+                    a
+                      span Товаров: #{id.idArr.length}
+                    div(class='receipt-item__prods_card', hidden)
+                      each item in id.idArr
+                        div.item-wrapper
+                          div.img-wrapper
+                            img(src=item.image, alt="")
+                          
+                          div.info-wrapper
+                            p= item.name
+
+                            div.price-wrapper
+                              p 
+                                span= item.quantity + ' штук х ' + Math.ceil(item.price) + 'р'
+                              p
+                                span= Math.ceil(item.price * item.quantity).toLocaleString().replace(',', ' ') + 'р'
+    script
+      include main.js
