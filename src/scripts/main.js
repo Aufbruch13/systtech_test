@@ -12,7 +12,7 @@ var toHideProducts = function (e) {
   hideBlock.hidden = !hideBlock.hidden;
 }
 
-main.addEventListener('click', toHideProducts); ////скрытие/открытие блока со списком товаров 
+main.addEventListener('click', toHideProducts); //скрытие/открытие блока со списком товаров 
 
 
 var toHideReceipts = function (e) {

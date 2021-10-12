@@ -1,0 +1,60 @@
+include query_result.pug
+-
+  var months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+  'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+
+  function dateConversion(item) { // конвертация даты в формат 'число месяц' (кириллица)
+    var date = item.date.split(' ')[0].split('-');
+
+    item.date = date[2] + ' ' + months[date[1] - 1];
+
+    return item;
+  }
+
+  
+  function toFormatArray(arr) {
+    var items = arr.map(dateConversion); 
+   
+    var result = [];
+
+    for (var i = 0; i < items.length; i++) { //создание многомерного массива
+      var prevItem = items[i - 1];
+
+      if (prevItem === undefined ||
+        items[i].date !== prevItem.date) { // добавления в массив структуры с новой датой
+        result.push({
+            dateArr: [{
+                idArr: [items[i]],
+                idValue: items[i].id,
+            }],
+            dateValue: items[i].date,
+            sum: items[i].price * items[i].quantity,
+        });
+
+      } else {
+        var curInd = result.length - 1; //индекс текущего элемента массива result
+        var curDateInd = result[curInd].dateArr; //индекс текущего элемента массива dateArr
+
+        result[curInd].sum += items[i].price * items[i].quantity;
+
+        if (prevItem === undefined ||
+            items[i].id !== prevItem.id) { //добавление в массив структуры с новым id
+            curDateInd.push({
+              idArr: [items[i]],
+              idValue: items[i].id,
+            });
+        } else {
+            curDateInd[curDateInd.length - 1].idArr.push(items[i]); //добавление данных в уже созданную структуру
+        }
+      }
+    }
+    return result;
+  }
+
+  function toFormatPrice(price) { // форматирует цены
+    return price.toLocaleString("ru-RU", { minimumFractionDigits: 2})
+  }
+
+  var arr_result = toFormatArray(receiptsArray);
+
+

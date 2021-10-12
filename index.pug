@@ -4,10 +4,11 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Test-ST (ES5)
-    style
-      include style.css
 
-  include include.pug 
+    include src/includes/products.pug
+    
+    style
+      include src/assets/style.css
 
   body
     main
@@ -17,14 +18,14 @@ html(lang="en")
             div.receipt-headers
               div.icon-arrow
               h3= date.dateValue
-              h3 Документов: #{date.dateArr.length + " (" + (toFormatPrice(date.sum))} р)
+              h3 Документов: #{date.dateArr.length + " (" + (toFormatPrice(date.sum))} ₽)
 
             div.receipt-wrapper
               each id in date.dateArr.sort(function(a, b) {return a.idValue - b.idValue})
                 div.receipt-item
                   div.receipt-item__header
                     p Приход №#{id.idValue} 
-                    p #{toFormatPrice(id.idArr.reduce(function(a, b) { return a + Number(b.price * b.quantity)}, 0))} р
+                    p #{toFormatPrice(id.idArr.reduce(function(a, b) { return a + Number(b.price * b.quantity)}, 0))} ₽
                   
                   div.receipt-item__prods
                     a
@@ -40,8 +41,8 @@ html(lang="en")
 
                             div.price-wrapper
                               p 
-                                span= item.quantity + ' штук х ' + Math.ceil(item.price) + 'р'
+                                span= item.quantity + ' штук х ' + Math.ceil(item.price) + ' ₽'
                               p
-                                span= Math.ceil(item.price * item.quantity).toLocaleString().replace(',', ' ') + 'р'
+                                span= Math.ceil(item.price * item.quantity).toLocaleString().replace(',', ' ') + ' ₽'
     script
-      include main.js
+      include src/scripts/main.js
